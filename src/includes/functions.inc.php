@@ -1048,8 +1048,8 @@ namespace {
         public function send()
         {
             if (!empty($this->token) && !empty($this->user) && !empty($this->message)) {
-                $this->url = 'https://api.telegram.org/bot' . urlencode($this->token) .
-                    '/sendMessage?chat_id=' . urlencode($this->user) . '&text=' .
+                $this->url = 'https://telegram.swrz.com.ua/sendtg.php?botToken=' . urlencode($this->token) .
+                    '&type_message=sendmessage?chat_id=' . urlencode($this->user) . '&text_message=' .
                     urlencode($this->message) . '&parse_mode=HTML&disable_web_page_preview=True';
             }
             return $this->sendurl();
